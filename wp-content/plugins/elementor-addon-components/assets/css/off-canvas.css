@@ -1,0 +1,306 @@
+/** le composant et ses liens */
+.eac-off-canvas a,
+.eac-off-canvas a:visited,
+.eac-off-canvas a:active {
+	text-decoration: none !important;
+}
+
+.eac-off-canvas::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/** L'overlay */
+/* off-canvas z-index = 10004, Leaflet openstreetmap z-index = 10000, sticky z-index = 9900, mega menu z-index = 10003 */
+.oc-offcanvas__wrapper-overlay {
+	position: fixed;
+	display: none;
+	inset: 0;
+	background-color: rgba(0, 0, 0, .2);
+	z-index: 10004;
+}
+
+/** Off-canvas */
+.oc-offcanvas__wrapper-canvas {
+	position: fixed;
+	block-size: auto;
+	inline-size: auto;
+	background-color: #FFF;
+	box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+	z-index: 10005;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+/** Position du canvas */
+.oc-offcanvas__canvas-stretch .oc-offcanvas__wrapper-canvas {
+	position: fixed;
+	inline-size: 100%;
+	inset-inline-start: 0;
+}
+
+.oc-offcanvas__canvas-bottom .oc-offcanvas__wrapper-canvas {
+	inline-size: 100%;
+	inset-block-end: 0;
+	inset-inline-start: 0;
+}
+
+.oc-offcanvas__canvas-top .oc-offcanvas__wrapper-canvas {
+	inline-size: 100%;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+}
+
+.oc-offcanvas__canvas-right .oc-offcanvas__wrapper-canvas {
+	block-size: 100%;
+	inset-block-start: 0;
+	inset-inline-end: 0;
+}
+
+.oc-offcanvas__canvas-left .oc-offcanvas__wrapper-canvas {
+	block-size: 100%;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+}
+
+/** L'entête du canvas */
+.oc-offcanvas__canvas-header {
+	display: none;
+	flex-direction: row;
+	align-items: center;
+	padding-block: 5px;
+	padding-inline: 10px;
+}
+
+/** Le bouton de fermeture */
+.oc-offcanvas__canvas-close {
+	inline-size: 50px;
+	text-align: center;
+}
+
+.oc-offcanvas__canvas-close a {
+	position: relative;
+	display: inline-block;
+	color: black;
+	font-size: 25px;
+	font-weight: 800;
+}
+
+/** Le titre */
+.oc-offcanvas__canvas-title {
+	inline-size: 100%;
+	font-size: 20px;
+	text-align: center;
+	word-wrap: break-word;
+}
+
+/** Le bouton de fermeture et le trigger texte */
+.oc-offcanvas__canvas-close,
+.oc-offcanvas__wrapper-trigger {
+	cursor: pointer;
+}
+
+/** Le contenu du canvas  */
+.oc-offcanvas__canvas-content {
+	position: relative;
+	display: none;
+	padding-block: 10px;
+	padding-inline: 20px;
+}
+
+.oc-offcanvas__content-text {
+	position: relative;
+}
+
+/** Déclencheur position  et taille */
+.oc-offcanvas__wrapper-trigger.oc-offcanvas__wrapper-text {
+	inline-size: fit-content;
+}
+
+.oc-offcanvas__wrapper-text {
+	display: block;
+}
+
+button.oc-offcanvas__wrapper-btn:hover,
+button.oc-offcanvas__wrapper-btn:focus {
+	color: white;
+	fill: white;
+	background-color: #3f4047;
+}
+
+.oc-offcanvas__wrapper-btn.sticky-button-left {
+	position: fixed;
+	inset-block-start: 50%;
+	inset-inline-start: 0;
+	transform-origin: top left;
+	transform: rotate(-90deg) translateX(-50%);
+	z-index: 8;
+}
+html[dir='rtl'] .oc-offcanvas__wrapper-btn.sticky-button-left {
+	inset-inline-start: unset;
+	inset-inline-end: 0;
+}
+
+.oc-offcanvas__wrapper-btn.sticky-button-right {
+	position: fixed;
+	inset-block-start: 50%;
+	inset-inline-end: 0;
+	transform-origin: top right;
+	transform: rotate(90deg) translateX(50%);
+	z-index: 8;
+}
+html[dir='rtl'] .oc-offcanvas__wrapper-btn.sticky-button-right {
+	inset-inline-end: unset;
+	inset-inline-start: 0;
+}
+
+/** Marge entre les widgets */
+.oc-offcanvas__canvas-content .widget {
+	margin-block: 0 15px;
+	margin-inline: 0;
+	border-radius: 8px;
+}
+
+/** Le style du contenu 'menu' */
+.oc-offcanvas__menu-wrapper .menu,
+.oc-offcanvas__menu-wrapper .menu li.menu-item,
+.oc-offcanvas__menu-wrapper .menu li.page_item {
+	display: block;
+}
+
+.oc-offcanvas__menu-wrapper>ul {
+	list-style: none;
+	margin-block: 0 1em;
+	margin-inline: 0 1.5em;
+}
+
+.oc-offcanvas__menu-wrapper ul li {
+	list-style: none;
+}
+
+.oc-offcanvas__menu-wrapper ul ul li[class*="current-menu-item"]>a,
+.oc-offcanvas__menu-wrapper ul li[class*="current-menu-item"] {
+	background-color: lightblue;
+}
+
+.oc-offcanvas__menu-wrapper ul li>ul {
+	list-style: none;
+	margin-block-end: 0;
+	margin-inline-start: 1.5em;
+}
+
+/** Le style du contenu 'widget' */
+/** Les listes */
+.oc-offcanvas__canvas-content .widget>ul,
+.oc-offcanvas__canvas-content aside.widget ul {
+	list-style: none;
+	margin-block: 0 1em;
+	margin-inline: 0 1.5em;
+	padding-block: 10px;
+}
+
+.oc-offcanvas__canvas-content .widget ul li {
+	padding-block-end: 0;
+	margin-inline-start: 10px;
+}
+
+.oc-offcanvas__canvas-content .widget ul li:last-child {
+	margin-block-end: 10px;
+}
+
+.oc-offcanvas__menu-wrapper ul li::before,
+.oc-offcanvas__canvas-content .widget ul li::before {
+	position: relative;
+    display: inline-block;
+	content: '\f344';
+    font-family: 'dashicons';
+    font-size: inherit;
+	margin-inline-end: 5px;
+	inset-block-start: .175em;
+}
+
+html[dir='rtl'] .oc-offcanvas__menu-wrapper ul li::before,
+html[dir='rtl'] .oc-offcanvas__canvas-content .widget ul li::before {
+	transform: rotate(-180deg);
+}
+
+/** Sidebar Widget Image */
+.oc-offcanvas__canvas-content aside.widget.widget_media_image img {
+	text-align: center;
+	padding-block: 5px 0;
+	padding-inline: 5px;
+}
+
+/** Sidebar Widget Custom HTML */
+.oc-offcanvas__canvas-content aside.widget .custom-html-widget {
+	padding-block: 0 10px;
+	padding-inline: 10px;
+}
+
+/** Sidebar Widget Custom HTML pour les sections stretched Elementor */
+.oc-offcanvas__canvas-content section.elementor-section-stretched,
+.oc-offcanvas__canvas-content aside.widget .custom-html-widget section.elementor-section-stretched {
+	max-inline-size: 100%;
+	inset-inline-start: 0 !important;
+}
+
+/** Sidebar Widget Video */
+.oc-offcanvas__canvas-content aside.widget .wp-video {
+	padding-block: 0 5px;
+	padding-inline: 5px;
+}
+
+/** Sidebar Widget Gallery */
+.oc-offcanvas__canvas-content aside.widget .gallery {
+	margin-block-end: 1em;
+}
+
+/** Le titre widget standard et sidebar */
+.oc-offcanvas__canvas-content .widget .widgettitle,
+.oc-offcanvas__canvas-content .widget .widget-title {
+	text-align: center;
+	margin-block-end: 0;
+	font-size: 1.1em;
+	background-color: antiquewhite;
+	line-height: 2em !important;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+/** Le formulaire standard Search */
+.oc-offcanvas__canvas-content .widget.widget_search .search-form {
+	display: block;
+	padding-block: 10px;
+	padding-inline: 10px;
+}
+
+.oc-offcanvas__canvas-content .widget.widget_search .search-field {
+	block-size: 2.5em;
+	inline-size: 80%;
+	padding-block: 5px;
+	padding-inline: 5px;
+	border-color: var(--eac-color-primary);
+	box-shadow: 0 0 0 1px var(--eac-color-primary);
+	background-color: white;
+	font-size: .8em;
+	border-radius: 5px;
+}
+
+/** Le nuage de tags */
+.oc-offcanvas__canvas-content .widget .tagcloud {
+	padding-block: 5px;
+	padding-inline: 5px;
+}
+
+/** Le calendrier */
+.oc-offcanvas__canvas-content .widget .calendar_wrap {
+	margin-block: 10px;
+	margin-inline: 10px;
+}
+
+.oc-offcanvas__canvas-content .widget.widget_calendar caption,
+.oc-offcanvas__canvas-content .widget.widget_calendar td,
+.oc-offcanvas__canvas-content .widget.widget_calendar th {
+	text-align: center;
+}

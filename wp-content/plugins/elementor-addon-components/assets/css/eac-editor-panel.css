@@ -1,0 +1,151 @@
+/** CSS du panel de l'éditeur */
+
+/** Les heading des widgets */
+div[class*='elementor-control-ag_'] .elementor-control-field h3,
+div[class*='elementor-control-ig_'] .elementor-control-field h3,
+div[class*='elementor-control-cd_'] .elementor-control-field h3,
+div[class*='elementor-control-stm_'] .elementor-control-field h3,
+div[class*='elementor-control-rss_'] .elementor-control-field h3,
+div[class*='elementor-control-tm_'] .elementor-control-field h3,
+div[class*='elementor-control-social_media_'] .elementor-control-field h3,
+div[class*='elementor-control-acf_relation_'] .elementor-control-field h3,
+div[class*='elementor-control-al_'] .elementor-control-field h3,
+div[class*='elementor-control-toc_'] .elementor-control-field h3 {
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+/** Les tabs du contenu grille de produits  */
+span[class*=" eicon-"],
+span[class^="eicon"] {
+	font-size: initial;
+	line-height: 24px;
+	vertical-align: middle;
+}
+
+/** La boîte warning */
+.eac-editor-panel_warning {
+	font-size: 13px;
+	line-height: 1.4em;
+	background-color: #f3f0ca;
+	color: #886726;
+	padding: 10px;
+	border-radius: 3px;
+	border: none;
+}
+
+/** La boîte info */
+.eac-editor-panel_info {
+	font-size: 13px;
+	line-height: 1.4em;
+	background-color: #A1CAE2;
+	color: #FFFFFF;
+	padding: 10px;
+	border-radius: 3px;
+	border: none;
+}
+
+/** Les fonts control condition et des tabs pour les marqueurs OpenStreetMap */
+.eac-osm-tabs,
+.eac-condition-choose {
+	font-size: 15px !important;
+	font-weight: 600 !important;
+	font-style: initial !important;
+}
+
+/** Étiquettes de droite des composants et des sections de l'onglet Advanced */
+/**.elementor-control-display_condition*/
+.eac-icon-elements:after,
+[data-collapse_id="eac_custom_element_css"]:after,
+[data-collapse_id="eac_custom_element_attributes"]:after,
+[data-collapse_id="eac_custom_element_sticky"]:after,
+[data-collapse_id="eac_custom_element_lottie"]:after,
+[data-collapse_id="eac_custom_element_effect"]:after,
+.elementor-control-eac_element_link .elementor-control-title:after,
+.elementor-control-display_condition .elementor-section-title:after,
+[data-collapse_id="eac_custom_element_bg_images"]:after,
+[data-collapse_id="eac_custom_element_kb_slideshow"]:after,
+[data-collapse_id="eac_custom_element_condition"]:after {
+	content: 'EAC';
+	position: absolute;
+	inset-block-start: 5px;
+	inset-inline-end: 9px;
+	padding: 2px 3px;
+	font-size: 8px;
+	font-weight: 600;
+	color: white;
+	background-color: #c9c9c9;
+}
+
+.elementor-control-eac_element_link .elementor-control-title:after {
+	inset-block-start: 0;
+	inset-inline-end: 5px;
+}
+
+/** Styles du control File Viewer  */
+.eac-viewer_control-field .elementor-control-title {
+	display: block;
+}
+
+.eac-viewer_control-field .eac-selected-file-name {
+	display: block;
+	inline-size: 100%;
+	margin-block-start: 10px;
+	color: #646970;
+	background-color: #f0f0f1;
+}
+
+.eac-viewer_control-field .elementor-control-input-wrapper {
+	display: flex;
+	inline-size: calc(100% + 10px);
+	margin-inline-end: -10px;
+}
+
+.eac-viewer_control-field .elementor-control-input-wrapper .eac-select-file,
+.eac-viewer_control-field .elementor-control-input-wrapper .eac-view-file,
+.eac-viewer_control-field .elementor-control-input-wrapper .eac-remove-file {
+	padding: 10px 15px;
+	text-align: center;
+}
+
+.eac-viewer_control-field .elementor-control-input-wrapper .eac-remove-file {
+	margin-inline-start: 10px;
+}
+
+.eac-viewer_control-field .elementor-control-input-wrapper .eac-select-file {
+	display: block;
+}
+
+.eac-viewer_control-field .elementor-control-input-wrapper>div:first-of-type {
+	flex-grow: 1;
+}
+
+.eac-viewer_control-field .elementor-control-input-wrapper>div:last-of-type {
+	flex-shrink: 1;
+}
+
+.eac-viewer_control-field .elementor-control-input-wrapper i {
+	margin-inline-end: 0;
+}
+
+/** Style du control select2 */
+.eac-select2_control-field .select2-selection__clear {
+	margin-inline-end: 5px !important;
+}
+
+/** Logo avant le help URL */
+#elementor-panel__editor__help__link[href^="https://elementor-addon-components.com/"]::before {
+	position: relative;
+	display: inline-block;
+	content: ' ';
+	background-image: url(../../admin/images/logos/eac-02-favicon.svg);
+	background-size: 35px auto;
+	block-size: 35px;
+	inline-size: 35px;
+	margin-inline-end: 5px;
+}
+
+/** Le teaser des balises dynamiques */
+.elementor-tags-list__teaser {
+	display: none;
+}

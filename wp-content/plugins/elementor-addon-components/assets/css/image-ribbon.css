@@ -1,0 +1,77 @@
+/** le composant et ses liens */
+.eac-image-ribbon a,
+.eac-image-ribbon a:visited,
+.eac-image-ribbon a:active {
+	text-decoration: none !important;
+}
+
+.eac-image-ribbon {
+	line-height: 0;
+}
+
+.image-ribbon span {
+	display: block;
+}
+
+.image-ribbon {
+	position: absolute;
+	block-size: 200px;
+	inline-size: 200px;
+	inset-block-start: 0;
+	inset-inline-start: auto;
+	inset-inline-end: 0;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	overflow: hidden;
+	z-index: 2;
+}
+
+.image-ribbon.image-ribbon-left {
+	inset-inline-start: 0;
+	inset-inline-end: auto;
+	-webkit-transform: rotate(0);
+	transform: rotate(0);
+}
+
+.image-ribbon.image-ribbon-right {
+	inset-inline-start: auto;
+	inset-inline-end: 0;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+html[dir='rtl'] .image-ribbon.image-ribbon-right {
+	transform: rotate(-90deg);
+}
+
+.image-ribbon-inner {
+	position: relative;
+	inline-size: 200%;
+	inset-inline-start: 0;
+	margin-block-start: 35px;
+	text-align: center;
+	line-height: 1.7em;
+	font-size: 14px;
+	text-transform: uppercase;
+	box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+	-webkit-transform: translate(calc(-50% + 35px), -50%) rotate(-45deg);
+	transform: translate(calc(-50% + 35px), -50%) rotate(-45deg);
+}
+
+.image-ribbon-img,
+.image-ribbon-img figure {
+	text-align: center;
+}
+
+.image-ribbon-img figure {
+	overflow: hidden;
+}
+
+.image-ribbon-img figcaption {
+	margin: 0;
+	padding: 1.25em 0;
+	text-align: center;
+	font-style: italic;
+	background-color: white;
+	line-height: 1.5em;
+}

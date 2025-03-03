@@ -1,0 +1,132 @@
+/** le composant et ses liens */
+.eac-image-promo a,
+.eac-image-promo a:visited,
+.eac-image-promo a:active {
+	text-decoration: none !important;
+}
+
+.ip-wrapper {
+	position: relative;
+	background-color: #b98f1c;
+	margin-block: 0;
+	margin-inline: auto;
+}
+
+.ip-icone {
+	text-align: center;
+	margin-block: 20px;
+	margin-inline: auto;
+}
+
+.ip-image {
+	margin-block-end: 10px !important;
+}
+
+.ip-wrapper__inner_content {
+	padding-inline: 10px;
+}
+
+.ip-wrapper .ip-title {
+	color: #FFF;
+	font-size: 1.8em;
+	text-align: center;
+	margin-block-end: 10px;
+}
+
+.ip-wrapper .ip-title:after {
+	display: block;
+	content: '';
+	border-color: #FFF;
+	border-block-start: 2px solid;
+	inline-size: 85%;
+	margin-block: 5px;
+	margin-inline: auto;
+}
+
+.ip-description {
+	background-color: transparent !important;
+	margin-block-end: 15px;
+}
+
+.ip-description .ip-description-item {
+	padding: 0;
+	font-size: 1em;
+	margin-inline-start: 5px;
+}
+
+.ip-description .ip-description-item .fa-check,
+.ip-description .ip-description-item .e-font-icon-svg.e-fas-check {
+	color: green;
+	fill: green;
+}
+
+.ip-description .ip-description-item .fa-times,
+.ip-description .ip-description-item .e-font-icon-svg.e-fas-times {
+	color: red;
+	fill: red;
+}
+
+.ip-description .ip-description-item .ip-description__item {
+	color: #FFF;
+	display: flex;
+	align-items: center;
+}
+
+.ip-description .ip-description-item .ip-description__item .ip-description__item-icon {
+	margin-inline-end: .5rem;
+}
+
+.ip-description .ip-description-item .ip-description__item {
+	font-size: 1em;
+	line-height: 2;
+}
+
+.strike-item {
+	text-decoration: line-through;
+}
+
+.ip-prix {
+	position: relative;
+	inline-size: 80%;
+	margin-block-end: 10px;
+	margin-inline: auto;
+	background-color: #e2bc74;
+	color: #FFF;
+	font-size: 1.5em;
+	text-align: center;
+	line-height: 1.3;
+	border-radius: 3px;
+}
+
+.ip-button-wrapper {
+	text-align: center;
+}
+
+.ip-button-wrapper a {
+	text-decoration: none !important;
+}
+
+.ip-button {
+	display: inline-block !important;
+	/* Attention au ccs image-ribbon.css = .eac-image-promo span: display: block; */
+	color: #FFF;
+	font-size: 1em;
+	background-color: #e2bc74;
+	margin-block-end: 10px;
+	padding-block: 10px;
+	padding-inline: 25px;
+	border-radius: 3px;
+}
+
+.ip-button-wrapper .ip-button i {
+	margin-inline-end: .35em;
+}
+
+.ip-button-wrapper .ip-button.eac-icon-svg svg {
+	line-height: 1;
+	margin-inline-end: 5px;
+}
+
+html[dir='rtl'] .ip-button-wrapper .ip-button.eac-icon-svg svg {
+	transform: rotate(-180deg);
+}

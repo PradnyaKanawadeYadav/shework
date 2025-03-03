@@ -1,0 +1,213 @@
+/** le composant et ses liens */
+.eac-modal-box a,
+.eac-modal-box a:visited,
+.eac-modal-box a:active {
+	text-decoration: none !important;
+}
+
+.eac-modal-box::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/** Certain contenu sont cachés pour être affiché dans la Fancybox  */
+.mb-modalbox__hidden-content-wrapper {
+	padding-block: 20px;
+	padding-inline: 20px;
+	overflow-y: auto;
+}
+
+/** Elementor section stretched */
+.mb-modalbox__hidden-content-wrapper section.elementor-section-stretched {
+	max-inline-size: 100%;
+	inset-inline-start: 0 !important;
+}
+
+/** Le titre à afficher dans la Fancybox */
+.mb-modalbox__hidden-content-title {
+	position: relative;
+	margin-block-end: 0px;
+	text-align: center;
+	line-height: unset;
+}
+
+.mb-modalbox__hidden-content-title span {
+	display: block;
+}
+
+/** Le contenu à afficher dans la Fancybox */
+.mb-modalbox__hidden-content-body {
+	position: relative;
+	block-size: auto;
+	margin-block-start: 10px;
+}
+
+.mb-modalbox__hidden-content-body div,
+.mb-modalbox__hidden-content-body a {
+	line-height: 1.3em;
+}
+
+/** La couleur ou l'image background */
+.mb-modalbox__hidden-content-body-bg {
+	position: absolute;
+	inset: 0;
+}
+
+/** Déclencheurs bouton ou texte */
+.mb-modalbox__wrapper > a {
+	display: inline-block;
+}
+
+.mb-modalbox__wrapper-trigger {
+	cursor: pointer;
+}
+
+/** Style des boutons déclencheurs  */
+button.mb-modalbox__wrapper-btn:hover,
+button.mb-modalbox__wrapper-btn:focus {
+	color: white;
+	fill: white;
+	background-color: #3f4047;
+}
+
+.mb-modalbox__wrapper-img,
+.mb-modalbox__wrapper-text {
+	display: block;
+}
+
+.mb-modalbox__wrapper-btn,
+.mb-modalbox__wrapper-text {
+	position: relative;
+	inline-size: fit-content;
+}
+
+/** Animation Fancybox */
+.fancybox-fx-slide-in-out-right.fancybox-slide--previous {
+	transform: translateX(-100%);
+}
+
+.fancybox-fx-slide-in-out-right.fancybox-slide--next {
+	transform: translateX(100%);
+}
+
+.fancybox-fx-slide-in-out-right.fancybox-slide--current {
+	transform: translateX(0);
+}
+
+.fancybox-fx-slide-in-out-left.fancybox-slide--previous {
+	transform: translateX(100%);
+}
+
+.fancybox-fx-slide-in-out-left.fancybox-slide--next {
+	transform: translateX(-100%);
+}
+
+.fancybox-fx-slide-in-out-left.fancybox-slide--current {
+	transform: translateX(0);
+}
+
+.fancybox-fx-slide-in-out-top.fancybox-slide--previous {
+	transform: translateY(100%);
+}
+
+.fancybox-fx-slide-in-out-top.fancybox-slide--next {
+	transform: translateY(-100%);
+}
+
+.fancybox-fx-slide-in-out-top.fancybox-slide--current {
+	transform: translateY(0);
+}
+
+.fancybox-fx-slide-in-out-bottom.fancybox-slide--previous {
+	transform: translateY(-100%);
+}
+
+.fancybox-fx-slide-in-out-bottom.fancybox-slide--next {
+	transform: translateY(100%);
+}
+
+.fancybox-fx-slide-in-out-bottom.fancybox-slide--current {
+	transform: translateY(0);
+}
+
+/** Hauteur de la fancy-box par défaut */
+.fancybox-content {
+	block-size: auto;
+}
+
+/** Postion de la Fancybox */
+.modal-topleft .fancybox-content {
+	position: absolute;
+	inset-block-start: 15px;
+	inset-inline-start: 15px;
+}
+
+.modal-topright .fancybox-content {
+	position: absolute;
+	inset-block-start: 15px;
+	inset-inline-end: 15px;
+}
+
+.modal-bottomleft .fancybox-content {
+	position: absolute;
+	inset-block-end: 15px;
+	inset-inline-start: 15px;
+}
+
+.modal-bottomright .fancybox-content {
+	position: absolute;
+	inset-block-end: 15px;
+	inset-inline-end: 15px;
+}
+
+@media (max-width: 768px) {
+
+	.modal-topleft .fancybox-content,
+	.modal-bottomleft .fancybox-content {
+		inset-inline-start: 0;
+	}
+
+	.modal-topright .fancybox-content,
+	.modal-bottomright .fancybox-content {
+		inset-inline-end: 0;
+	}
+}
+
+/** La boîte n'est pas modale */
+.mb-modalbox_no-modal .fancybox-bg,
+.mb-modalbox_no-modal .fancybox-infobar,
+.mb-modalbox_no-modal .fancybox-toolbar,
+.mb-modalbox_no-modal .fancybox-caption,
+.mb-modalbox_no-modal .fancybox-navigation,
+.mb-modalbox_no-modal .fancybox-button {
+	display: none;
+}
+
+.mb-modalbox_no-modal.no-modal_topleft {
+	inset-block-start: 0;
+	inset-block-end: auto;
+	inset-inline-start: 0;
+	inset-inline-end: auto;
+}
+
+.mb-modalbox_no-modal.no-modal_topright {
+	inset-block-start: 0;
+	inset-block-end: auto;
+	inset-inline-start: auto;
+	inset-inline-end: 0;
+}
+
+.mb-modalbox_no-modal.no-modal_bottomleft {
+	inset-block-start: auto;
+	inset-block-end: 0;
+	inset-inline-start: 0;
+	inset-inline-end: auto;
+}
+
+.mb-modalbox_no-modal.no-modal_bottomright {
+	inset-block-start: auto;
+	inset-block-end: 0;
+	inset-inline-start: auto;
+	inset-inline-end: 0;
+}

@@ -1,0 +1,34 @@
+/** le composant et ses liens */
+.eac-pdf-viewer a,
+.eac-pdf-viewer a:visited,
+.eac-pdf-viewer a:active {
+	text-decoration: none !important;
+}
+
+.eac-pdf-viewer::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.fv-viewer_loader-wheel {
+	display: none;
+}
+
+.fv-viewer__wrapper>a {
+	display: inline-block;
+}
+
+/** Style du texte déclencheur */
+.fv-viewer__wrapper-text {
+	position: relative;
+	inline-size: fit-content;
+}
+
+/** Type de bouton */
+button.fv-viewer__wrapper-btn:hover,
+button.fv-viewer__wrapper-btn:focus {
+	color: initial;
+	fill: initial;
+	background-color: initial;
+}
